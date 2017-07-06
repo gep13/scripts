@@ -5,7 +5,7 @@ $ids = Invoke-RestMethod `
 
 $rows = @()
 
-for($index = 0;$index -lt $packages.Count;$index+=4)
+for($index = 0;$index -lt $ids.Count;$index+=4)
 {
    $rows+=@(
      "'$($ids[$index].packageId)',".PadRight(35)
